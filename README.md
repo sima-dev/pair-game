@@ -1,4 +1,4 @@
 ## Игра в пары
 
 - Это учебная работа, акцент на js, а не на оформлении)
-- Попробуй сыграть (sima-dev.github.io/pair-game/)
+- Попробуй сыграть (http://sima-dev.github.io/pair-game/)
