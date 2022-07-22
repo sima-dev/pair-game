@@ -1,0 +1,237 @@
+:root {
+  --white-color: #fff;
+  --dark-color: #333;
+  --light-gray: #cacaca;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100wh;
+  padding: 50px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: auto;
+  padding: 100px;
+
+  border-radius: 10px;
+  background-image: url('../assets/img/back2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.screen__title {
+  display: block;
+
+  margin-bottom: 50px;
+
+  color: var(--white-color);
+
+  font-size: 50px;
+}
+
+.start-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start-form__input {
+  width: 300px;
+  height: 70px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  background-color: var(--light-gray);
+
+  font-size: 32px;
+}
+
+.start-form__time-title {
+  margin-bottom: 15px;
+
+  color: var(--white-color);
+}
+
+.start-form__button {
+  padding: 30px 50px;
+
+  cursor: pointer;
+
+  border-radius: 10px;
+  background-color: var(--light-gray);
+
+  font-size: 32px;
+}
+
+.error-input {
+  outline: 3px solid red;
+}
+
+.error-title {
+  color: red;
+}
+
+.game-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: 660px;
+  margin: auto;
+
+  border-radius: 10px;
+
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+
+  cursor: pointer;
+  transition: transform .5s;
+  transform: scale(1);
+
+  border: 1px solid var(--dark-color);
+  border-radius: 10px;
+
+  transform-style: preserve-3d;
+}
+
+.card-small {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.card:active {
+  transition: transform .2s;
+  transform: scale(.98);
+}
+
+.card.turn {
+  transform: rotateY(180deg);
+}
+
+.card__front-side,
+.card__reverse-side {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+  backface-visibility: hidden;
+}
+
+.card__front-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotateY(180deg);
+
+  background-image: url('../assets/img/wool.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  font-size: 90px;
+}
+
+.card__front-side_small {
+  font-size: 70px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 70px;
+}
+
+.countdown__title {
+  margin-bottom: 20px;
+}
+
+.countdown__screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+
+  border-radius: 10px;
+  background-color: var(--light-gray);
+
+  font-size: 30px;
+}
+
+.finish-countdown {
+  color: red;
+}
+
+.screen__button-group {
+  display: flex;
+}
+
+.screen__button-yes,
+.screen__button-no {
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.screen__button-yes {
+  margin-right: 20px;
+
+  background-color: lightgreen;
+}
+
+.screen__button-no {
+  background-color: lightcoral;
+}
